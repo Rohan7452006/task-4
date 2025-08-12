@@ -1,0 +1,15 @@
+# Plot the Sigmoid function
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+x_vals = np.linspace(-10, 10, 100)
+y_vals = sigmoid(x_vals)
+
+plt.figure(figsize=(8, 6))
+plt.plot(x_vals, y_vals, label='Sigmoid Function')
+plt.title('Sigmoid Function')
+plt.xlabel('Z = $\\beta_0 + \\beta_1x_1 + ... + \\beta_nx_n$')
+plt.ylabel('P(y=1|X)')
+plt.grid(True)
+plt.legend()
+plt.savefig('sigmoid_function.png')
